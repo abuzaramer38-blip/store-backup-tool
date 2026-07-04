@@ -124,7 +124,7 @@ async function fetchAdminCollects(
   let hasMore = true;
 
   while (hasMore) {
-    const url = pageInfo
+  const url: string = pageInfo
       ? `${apiBase}/collects.json?limit=250&page_info=${pageInfo}`
       : `${apiBase}/collects.json?limit=250`;
 
