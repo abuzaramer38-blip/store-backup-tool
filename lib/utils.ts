@@ -79,7 +79,7 @@ export function formatCategoriesForShopify(
   tags: string[]
 ): { type: string; tags: string } {
   const categoryTags = categories.map((c) => c.path.replace(/ > /g, "/"));
-  const allTags = [...new Set([...tags, ...categoryTags])];
+  const allTags = Array.from(new Set([...tags, ...categoryTags]));
   const type =
     productType ||
     (categories.length > 0
